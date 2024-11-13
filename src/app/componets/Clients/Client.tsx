@@ -17,12 +17,16 @@ export const Client = () => {
             </h1>
         </div>
 
-        <div className='isolate overflow-hidden animate-marquee flex space-x-8 py-12'>
-            {EvoPartner.map((partner) => (
-                <MarqueePartner key={partner.id} img={partner.partner} />
-            ))}
+        <div className="marquee-wrapper overflow-hidden">
+            <div className="animate-marquee flex space-x-4 sm:space-x-8 py-6 sm:py-12">
+                {EvoPartner.map((partner) => (
+                    <MarqueePartner key={partner.id} img={partner.partner} />
+                ))}
+                {EvoPartner.map((partner) => (
+                    <MarqueePartner key={`duplicate-${partner.id}`} img={partner.partner} />
+                ))}
+            </div>
         </div>
-
 
     </>
 }

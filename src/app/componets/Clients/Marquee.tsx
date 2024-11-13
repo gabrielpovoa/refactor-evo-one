@@ -10,7 +10,7 @@ const MarqueePartner: React.FC<MarqueePartnerProps> = ({ img }) => (
         <Image
             src={img}
             alt='Partnet Logo - marquee'
-            className="object-cover max-w-5xl"
+            className="object-cover pointer-events-none max-w-5xl sm:max-w-5xl"
         />
     </div>
 );
