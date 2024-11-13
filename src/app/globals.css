@@ -14,8 +14,96 @@
   }
 }
 
+/* Style the entire scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  /* Set width for vertical scrollbar */
+  height: 12px;
+  /* Set height for horizontal scrollbar */
+}
+
+/* Style the thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: #BF211E;
+  /* Color of the thumb */
+  border-radius: 10px;
+  /* Round the corners */
+  border: 3px solid #f1f1f1;
+  /* Adds border around thumb */
+}
+
+/* Style the thumb when hovered */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Change thumb color on hover */
+}
+
+/* Style the track (the empty part of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Color of the track */
+  border-radius: 10px;
+  /* Round the corners */
+}
+
+/* Style the track when hovered */
+::-webkit-scrollbar-track:hover {
+  background: #ccc;
+}
+
+/* Style the scrollbar corner (where horizontal and vertical scrollbars meet) */
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+}
+
+
+*{
+  outline: none;
+  transition: all .3s linear;
+  resize: none;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.lucide-bot,
+.lucide-car,
+.lucide-computer {
+  width: 3rem;
+  height: 3rem;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px #141414; 
+  color: transparent; 
+  font-weight: bold; 
+}
+.text-stroke-white {
+  -webkit-text-stroke: 1px #fff; 
+  color: transparent; 
+  font-weight: bold; 
+}
+.text-stroke-contact {
+  -webkit-text-stroke: 1px #fff; 
+  color: transparent; 
+  font-weight: bold; 
+}
+.text-red-stroke {
+  -webkit-text-stroke: 1px #BF211E; 
+  color: transparent; 
+  font-weight: bold; 
+}
+
+@layer components {
+  .groupToggleMenu {
+    @apply md:hidden p-2 text-gray-700 hover:text-[#BF211E] w-10 h-10;
+  }
+
+  .paddingAlignment {
+    @apply px-6 py-8 sm:py-8 sm:px-1;
+  }
 }

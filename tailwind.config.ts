@@ -8,9 +8,26 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'home-evo-banner': "url('/bg-home-evo-banner.jpg')",
+        'contact-banner': "url('/contact-banner.jpg')",
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 25s linear infinite',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        red: '#BF211E',
+        flash: '#EEF0F2',
+        night: '#141414',
+
       },
     },
   },
