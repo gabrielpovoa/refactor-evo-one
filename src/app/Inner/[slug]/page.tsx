@@ -1,13 +1,14 @@
+'use client';
+
 import React from 'react';
 
 type Props = {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }> | { slug: string };
 };
 
-const Inner = ({ params }: Props) => {
-  const { slug } = params;
+
+const Inner = async ({ params }: Props) => {
+  const { slug } = await params;
   return <div>{slug}</div>;
 };
 
